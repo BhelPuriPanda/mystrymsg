@@ -1,6 +1,5 @@
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";
-import { ca } from "zod/locales";
 
 export async function POST(request: Request) {
     await dbConnect();
@@ -26,7 +25,7 @@ export async function POST(request: Request) {
         const isCodeNotExpired = new Date(existingUser.verifyCodeExpiry) > new Date();
 
         if (isCodeValid && isCodeNotExpired) {
-            username.isVerified = true;
+            existingUser.isVerified = true;
             await existingUser.save();
 
             return Response.json(
