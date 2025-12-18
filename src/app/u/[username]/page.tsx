@@ -156,7 +156,7 @@ export default function SendMessage() {
           </CardHeader>
           <CardContent className="flex flex-col space-y-4">
             {error ? (
-              <p className="text-red-500">{error.message}</p>
+              <p className="text-red-500">{error}</p>
             ) : (
               parseStringMessages(completion).map((message, index) => (
                 <Button
