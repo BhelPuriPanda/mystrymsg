@@ -49,7 +49,7 @@ const page = () => {
         <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
             <div className="text-center">
                 <h2 className="text-6xl font-bold mb-2">Verify Your Account</h2>
-                <p className="text-gray-600">Enter the verification code sent to your email.</p>
+                <p className="text-gray-600">Enter the verification code sent to your email. It's 123456 coz i'm broke and can't buy a domain</p>
             </div>
             <div>
                 <Form {...form}>
