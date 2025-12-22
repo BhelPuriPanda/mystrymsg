@@ -132,20 +132,22 @@ function UserDashboard() {
             Your Anonymous Link
           </h2>
 
-          <div className="flex gap-3">
-            <input
-              value={profileUrl}
-              disabled
-              className="flex-1 px-4 py-3 rounded-lg bg-[#020617] text-slate-300 border border-[#5DA9E9]/30"
-            />
-            <Button
-              onClick={copyToClipboard}
-              className="bg-[#5DA9E9] text-black hover:bg-[#7bbbf0]"
-            >
-              <Copy className="h-4 w-4 mr-1" />
-              Copy
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                value={profileUrl}
+                disabled
+                className="w-full px-4 py-3 rounded-lg bg-[#020617] text-slate-300 border border-[#5DA9E9]/30 truncate"
+              />
+
+              <Button
+                onClick={copyToClipboard}
+                className="w-full sm:w-auto bg-[#5DA9E9] text-black hover:bg-[#7bbbf0] flex items-center justify-center"
+              >
+                <Copy className="h-4 w-4 mr-2" />
+                Copy Link
+              </Button>
           </div>
+
         </div>
 
         {/* Controls */}
